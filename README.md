@@ -473,5 +473,225 @@ contact.html
 </body>
 </html>
 
+css
+
+/* ==============================
+   1. CSS RESET & BASE STYLES
+   ============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; /* easy to scale with rem */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #2e2e2e;
+  background-color: #f5fdf7;
+  margin: 0;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: #2b9348;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #55a630;
+}
+a:visited {
+  color: #1a7431;
+}
+a:focus {
+  outline: 2px dashed #2b9348;
+}
+
+/* ==============================
+   2. TYPOGRAPHY
+   ============================== */
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  color: #1a7431;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1em;
+  letter-spacing: 0.5px;
+}
+
+/* Highlighted text */
+.highlight {
+  background-color: #d8f3dc;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* ==============================
+   3. LAYOUT
+   ============================== */
+header {
+  background: #2b9348;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img.logo {
+  max-height: 50px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+nav ul li a:hover {
+  background: #55a630;
+}
+nav ul li a:active {
+  background: #1a7431;
+}
+
+/* Main layout grid */
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* content + sidebar */
+  gap: 20px;
+  padding: 20px;
+}
+
+aside {
+  background: #e9f5ec;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background: #1a7431;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* ==============================
+   4. COMPONENTS
+   ============================== */
+button, .btn {
+  background: #2b9348;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover, .btn:hover {
+  background: #55a630;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+button:active, .btn:active {
+  background: #1a7431;
+}
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.card {
+  background: white;
+  border: 1px solid #d3d3d3;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Forms */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+input:focus, textarea:focus {
+  border-color: #2b9348;
+  outline: none;
+  box-shadow: 0 0 5px rgba(43,147,72,0.5);
+}
+
+/* ==============================
+   5. RESPONSIVE DESIGN
+   ============================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    padding: 15px;
+  }
+
+  nav ul li a {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  button, .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
 </body>
 </html>
